@@ -14,7 +14,7 @@ public class DataGenerator {
 
     @DataProvider(name = "dp")
     public Object[][] testDataGenerator() {
-        Object[][] data = {{"student", "Password123"}};
+        Object[][] data = {{"admin", "admin123"}};
         return data;
     }
 

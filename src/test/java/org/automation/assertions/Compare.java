@@ -11,6 +11,7 @@ public class Compare {
         boolean flag = false;
         if(driver.getCurrentUrl().equals(expUrl)){
             flag = true;
+            System.out.println("The page url is: "+driver.getCurrentUrl());
         }
         return flag;
     }
@@ -18,6 +19,7 @@ public class Compare {
         boolean flag = false;
         if(driver.getTitle().equals(expTitle)){
             flag = true;
+            System.out.println("The Page Title is: "+driver.getTitle());
         }
         return flag;
     }

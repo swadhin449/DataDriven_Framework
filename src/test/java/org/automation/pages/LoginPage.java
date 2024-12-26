@@ -16,6 +16,7 @@ public class LoginPage {
         driver.findElement(By.name(Utility.fetchLocatorValue("login_password_name"))).sendKeys(pwd);
     }
     public void clickLoginButton() throws Exception{
-        driver.findElement(By.id(Utility.fetchLocatorValue("login_logbtn_id"))).click();
+        driver.findElement(By.xpath(Utility.fetchLocatorValue("login_logbtn_xpath"))).click();
     }
+
 }

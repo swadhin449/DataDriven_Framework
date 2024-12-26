@@ -21,6 +21,13 @@ public class Utility {
 
         return prop.get(key).toString();
     }
+    public static String fetchCompareValue(String key) throws IOException {
+        FileInputStream file = new FileInputStream("C:\\Users\\SwadhinKumarJena\\IdeaProjects\\DataDriven_Framework\\src\\test\\resources\\compare.properties");
+        Properties prop = new Properties();
+        prop.load(file);
+
+        return prop.get(key).toString();
+    }
 
 
 
