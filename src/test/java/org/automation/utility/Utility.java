@@ -28,6 +28,13 @@ public class Utility {
 
         return prop.get(key).toString();
     }
+    public static String fetchExcelValue(String key) throws IOException {
+        FileInputStream file = new FileInputStream("C:\\Users\\SwadhinKumarJena\\IdeaProjects\\DataDriven_Framework\\src\\test\\resources\\excelPath.properties");
+        Properties prop = new Properties();
+        prop.load(file);
+
+        return prop.get(key).toString();
+    }
 
 
 

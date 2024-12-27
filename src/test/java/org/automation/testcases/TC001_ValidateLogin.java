@@ -31,6 +31,5 @@ public class TC001_ValidateLogin extends DriverInstance {
             Generics.takeScreenShot(driver,"ValidateLogin");
             System.out.println("Exception while taking screenshot "+e.getMessage());
         }
-
     }
 }
