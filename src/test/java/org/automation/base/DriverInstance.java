@@ -13,22 +13,22 @@ public class DriverInstance {
     public WebDriver driver;
     @BeforeMethod
     public void initiateDriver() throws Exception{
-        if(Utility.fetchPropertyValue("browserName").toString().equalsIgnoreCase("chrome")){
+        if(Utility.fetchPropertyValue("browserName").equalsIgnoreCase("chrome")){
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
             driver.manage().window().maximize();
-        } else if(Utility.fetchPropertyValue("browserName").toString().equalsIgnoreCase("firefox")){
+        } else if(Utility.fetchPropertyValue("browserName").equalsIgnoreCase("firefox")){
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
             driver.manage().window().maximize();
-        } else if (Utility.fetchPropertyValue("browserName").toString().equalsIgnoreCase("edge")) {
+        } else if (Utility.fetchPropertyValue("browserName").equalsIgnoreCase("edge")) {
             WebDriverManager.edgedriver().setup();
             driver = new EdgeDriver();
             driver.manage().window().maximize();
         }else{
             System.out.println("Invalid browser name");
         }
-        driver.get(Utility.fetchPropertyValue("applicationUrl").toString());
+        driver.get(Utility.fetchPropertyValue("applicationUrl"));
     }
     @AfterMethod
     public void closeDriverInstance(){

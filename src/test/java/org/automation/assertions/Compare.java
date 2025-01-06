@@ -3,11 +3,11 @@ package org.automation.assertions;
 import org.openqa.selenium.WebDriver;
 
 public class Compare {
-    WebDriver driver;
+    public static WebDriver driver;
     public Compare(WebDriver driver) {
         this.driver=driver;
     }
-    public boolean validatePageUrl(String expUrl){
+    public static boolean validatePageUrl(String expUrl){
         boolean flag = false;
         if(driver.getCurrentUrl().equals(expUrl)){
             flag = true;
@@ -15,7 +15,7 @@ public class Compare {
         }
         return flag;
     }
-    public boolean validatePageTitle(String expTitle){
+    public static boolean validatePageTitle(String expTitle){
         boolean flag = false;
         if(driver.getTitle().equals(expTitle)){
             flag = true;

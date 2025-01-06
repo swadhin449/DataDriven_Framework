@@ -4,6 +4,7 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.automation.utility.Utility;
 import org.testng.annotations.DataProvider;
 
 import java.io.FileInputStream;
@@ -38,7 +39,5 @@ public class DataGenerator {
             Object[][] data = new Object[2][2];
             return data;
         }
-
     }
-
 }

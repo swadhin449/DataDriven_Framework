@@ -52,7 +52,7 @@ public class Generics {
         public static void takeScreenShot(WebDriver driver, String screenShotName) throws IOException {
             TakesScreenshot ts = (TakesScreenshot) driver;
             File src = ts.getScreenshotAs(OutputType.FILE);
-            File trg = new File("./Screenshots/"+screenShotName+".png");
+            File trg = new File("C:\\Users\\SwadhinKumarJena\\IdeaProjects\\DataDriven_Framework\\src\\test\\Screenshots\\"+screenShotName+".png");
             FileUtils.copyFile(src,trg);
         }
 }

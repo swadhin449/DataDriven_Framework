@@ -1,11 +1,8 @@
 package org.automation.testcases;
-
-
-import org.automation.assertions.Compare;
 import org.automation.base.DriverInstance;
 import org.automation.base.Generics;
 import org.automation.base.WaitStatement;
-import org.automation.datagenerators.DataGenerator;
+import org.automation.datagenerators.DataGenerator3;
 import org.automation.pages.LoginPage;
 
 import org.automation.utility.Utility;
@@ -13,14 +10,13 @@ import org.testng.annotations.Test;
 
 
 public class TC001_ValidateLogin extends DriverInstance {
-    @Test(dataProvider="dp",dataProviderClass = DataGenerator.class)
+    @Test(dataProvider="Excel4",dataProviderClass = DataGenerator3.class)
     public void validateLogin(String uname,String pwd) throws Exception{
         try{
             LoginPage lp = new LoginPage(driver);
-            Compare cp = new Compare(driver);
-            cp.validatePageUrl(Utility.fetchCompareValue("expUrl"));
-            cp.validatePageTitle(Utility.fetchCompareValue("expTitle"));
-            WaitStatement.threadWait(2000);
+            WaitStatement.threadWait(5000);
+            //Compare.validatePageUrl(Utility.fetchCompareValue("expUrl"));
+            //Compare.validatePageTitle(Utility.fetchCompareValue("expTitle"));
             lp.enterUserName(uname);
             WaitStatement.threadWait(2000);
             lp.enterPassword(pwd);
