@@ -32,6 +32,5 @@ public class HashMapToExcel {
         wb.write(fos);
         fos.close();
         System.out.println("Excel file created successfully");
-
     }
 }

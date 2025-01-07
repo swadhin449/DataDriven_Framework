@@ -22,8 +22,6 @@ public class DataGenerator2 {
             System.out.println("Exception - File is not available at the specified location."+ "\n" +e.getMessage());
         }
     }
-
-
     public FileInputStream fis;
     public XSSFWorkbook wb;
     public XSSFSheet sheet;
@@ -31,12 +29,10 @@ public class DataGenerator2 {
     DataGenerator2(String path){
         this.path=path;
     }
-
     public int getRowValue(String sheetName) throws IOException {
         fis = new FileInputStream(path);
         wb = new XSSFWorkbook(fis);
         sheet = wb.getSheet(sheetName);
-
         // Check if the sheet is null or has no rows
         if (sheet == null || sheet.getPhysicalNumberOfRows() == 0) {
             System.out.println("The sheet is empty.");
@@ -60,12 +56,10 @@ public class DataGenerator2 {
             }
             return numOfCell;
         } catch (Exception e) {
-            e.printStackTrace();
+            e.getMessage();
             return -1;
         }
-
     }
-
     public void generateCellData(String sheetName) throws Exception {
             fis = new FileInputStream(path);
             wb = new XSSFWorkbook(fis);
